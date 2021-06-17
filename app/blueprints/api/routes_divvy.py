@@ -4,8 +4,6 @@ from app.blueprints.divvy.models import *
 from app import db
 from datetime import datetime, timedelta
 
-import urllib.parse as urlparse
-from urllib.parse import parse_qs
 
 
 #######################################################
