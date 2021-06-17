@@ -41,13 +41,14 @@ def get_categories():
     results = Divvy.query.filter(*param)
     RETURN_DICT = {"average_duration": 0}
 
-    if results:
+    try:
         duration = 0
         count = 0
         for result in results:
             duration = duration + result.trip_duration
             count += 1
         RETURN_DICT["average_duration"] = duration / count
+    except: pass
 
     if from_station:
         from_station_name = db.session.query(Divvy.from_station_name).filter(Divvy.from_station_id == from_station).first()[0]
