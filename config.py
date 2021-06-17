@@ -13,12 +13,4 @@ class Config():
         'sqlite:///' + os.path.join(basedir, 'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = os.environ.get(
         'SQLALCHEMY_TRACK_MODIFICATIONS')
-    MAIL_SERVER = 'smtp.sendgrid.net'
-    MAIL_PORT = 587
-    MAIL_USE_TLS = True
-    MAIL_USERNAME = 'apikey'
-    MAIL_PASSWORD = os.environ.get('SENDGRID_API_KEY')
-    MAIL_DEFAULT_SENDER = os.environ.get('MAIL_DEFAULT_SENDER')
-    ADMINS = ['hirejohnloveland@gmail.com']
-    # set to 8 for testing
-    ITEMS_PER_PAGE = 8
+    
